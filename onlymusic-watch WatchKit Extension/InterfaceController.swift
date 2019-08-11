@@ -1,12 +1,14 @@
 
 //
 //  InterfaceController.swift
-//  MusicPlayer WatchKit Extension
+//  onlymusic-watch
 //
-
+//  Created by Anshul  Mohil on 11/08/19.
+//  Copyright © 2019 Anshul  Mohil. All rights reserved.
+//
 import WatchKit
 import Foundation
-
+import AVFoundation
 
 class InterfaceController: WKInterfaceController, WKCrownDelegate {
     
@@ -14,7 +16,7 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         case Playing
         case Paused
     }
-    
+    var player: AVAudioPlayer?
     var songState: SongState = .Paused
     var currentVolumeLevel: Float = 1.0
     let numberOfSteps = 3
@@ -45,6 +47,7 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         if songState == .Paused {
             songState = .Playing
             playButton.setBackgroundImage(UIImage(named: "Pause"))
+            playSound()
         } else {
             songState = .Paused
             playButton.setBackgroundImage(UIImage(named: "Play"))
@@ -65,4 +68,21 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         }
     }
     
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "Dangal", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
