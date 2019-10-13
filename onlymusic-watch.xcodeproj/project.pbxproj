@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64CD89222351A2A40099BE0F /* PlaylistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD89212351A2A40099BE0F /* PlaylistController.swift */; };
+		64CD892C2351B0A80099BE0F /* PlayListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD892B2351B0A80099BE0F /* PlayListDTO.swift */; };
 		64D2913922FFF26E0038E65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2913822FFF26E0038E65D /* AppDelegate.swift */; };
 		64D2913B22FFF26E0038E65D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2913A22FFF26E0038E65D /* ViewController.swift */; };
 		64D2913E22FFF26E0038E65D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D2913C22FFF26E0038E65D /* Main.storyboard */; };
@@ -16,11 +18,10 @@
 		64D2914E22FFF2740038E65D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64D2914C22FFF2740038E65D /* Interface.storyboard */; };
 		64D2915022FFF2740038E65D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D2914F22FFF2740038E65D /* Assets.xcassets */; };
 		64D2915722FFF2750038E65D /* onlymusic-watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 64D2915622FFF2750038E65D /* onlymusic-watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		64D2915C22FFF2750038E65D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2915B22FFF2750038E65D /* InterfaceController.swift */; };
+		64D2915C22FFF2750038E65D /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2915B22FFF2750038E65D /* PlayerController.swift */; };
 		64D2915E22FFF2750038E65D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2915D22FFF2750038E65D /* ExtensionDelegate.swift */; };
 		64D2916022FFF2750038E65D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2915F22FFF2750038E65D /* ComplicationController.swift */; };
 		64D2916222FFF2750038E65D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D2916122FFF2750038E65D /* Assets.xcassets */; };
-		A34F16EC2349C17A00754EE5 /* Dangal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A34F16EB2349C17A00754EE5 /* Dangal.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64CD89212351A2A40099BE0F /* PlaylistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistController.swift; sourceTree = "<group>"; };
+		64CD892B2351B0A80099BE0F /* PlayListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListDTO.swift; sourceTree = "<group>"; };
+		64CD892E235200A30099BE0F /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		64D2913522FFF26E0038E65D /* onlymusic-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "onlymusic-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D2913822FFF26E0038E65D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64D2913A22FFF26E0038E65D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +82,11 @@
 		64D2914F22FFF2740038E65D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D2915122FFF2740038E65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D2915622FFF2750038E65D /* onlymusic-watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "onlymusic-watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64D2915B22FFF2750038E65D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		64D2915B22FFF2750038E65D /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		64D2915D22FFF2750038E65D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		64D2915F22FFF2750038E65D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		64D2916122FFF2750038E65D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64D2916322FFF2750038E65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A34F16EB2349C17A00754EE5 /* Dangal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dangal.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +110,7 @@
 		64D2912C22FFF26E0038E65D = {
 			isa = PBXGroup;
 			children = (
-				A34F16EB2349C17A00754EE5 /* Dangal.mp3 */,
+				64CD892E235200A30099BE0F /* resources */,
 				64D2913722FFF26E0038E65D /* onlymusic-watch */,
 				64D2914B22FFF2740038E65D /* onlymusic-watch WatchKit App */,
 				64D2915A22FFF2750038E65D /* onlymusic-watch WatchKit Extension */,
@@ -151,11 +154,13 @@
 		64D2915A22FFF2750038E65D /* onlymusic-watch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				64D2915B22FFF2750038E65D /* InterfaceController.swift */,
+				64D2915B22FFF2750038E65D /* PlayerController.swift */,
 				64D2915D22FFF2750038E65D /* ExtensionDelegate.swift */,
 				64D2915F22FFF2750038E65D /* ComplicationController.swift */,
 				64D2916122FFF2750038E65D /* Assets.xcassets */,
 				64D2916322FFF2750038E65D /* Info.plist */,
+				64CD89212351A2A40099BE0F /* PlaylistController.swift */,
+				64CD892B2351B0A80099BE0F /* PlayListDTO.swift */,
 			);
 			path = "onlymusic-watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -281,7 +286,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A34F16EC2349C17A00754EE5 /* Dangal.mp3 in Resources */,
 				64D2916222FFF2750038E65D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D2915E22FFF2750038E65D /* ExtensionDelegate.swift in Sources */,
-				64D2915C22FFF2750038E65D /* InterfaceController.swift in Sources */,
+				64CD89222351A2A40099BE0F /* PlaylistController.swift in Sources */,
+				64D2915C22FFF2750038E65D /* PlayerController.swift in Sources */,
+				64CD892C2351B0A80099BE0F /* PlayListDTO.swift in Sources */,
 				64D2916022FFF2750038E65D /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

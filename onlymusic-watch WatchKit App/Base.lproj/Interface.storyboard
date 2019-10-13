@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XFf-jM-WQy">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Music Player-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MusicPlayer_WatchKit_App" customModuleProvider="target">
+                <controller identifier="Player" title="Music Player" id="AgC-eL-Hgc" customClass="PlayerController" customModule="onlymusic_watch_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="3mD-e2-LcM">
                             <items>
@@ -27,6 +27,9 @@
                                         <button width="100" height="100" alignment="left" backgroundImage="Rewind" id="hEm-0g-FJO">
                                             <variation key="device=watch38mm" height="40" width="40"/>
                                             <variation key="device=watch42mm" height="44" width="44"/>
+                                            <connections>
+                                                <action selector="prevSongTapped" destination="AgC-eL-Hgc" id="Waq-Nt-4Xj"/>
+                                            </connections>
                                         </button>
                                         <button width="100" height="100" alignment="left" backgroundImage="Play" id="0EV-me-RxM">
                                             <variation key="device=watch38mm" height="40" width="40"/>
@@ -52,12 +55,34 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="nextSong" destination="bsq-sV-Dk9" id="ho9-5b-KaL"/>
                         <outlet property="playButton" destination="0EV-me-RxM" id="NI0-Nz-lx5"/>
+                        <outlet property="previousSong" destination="hEm-0g-FJO" id="zel-bn-PVD"/>
                         <outlet property="volumeSlider" destination="3UV-4l-2fT" id="Bpy-yR-Jtn"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="159" y="1"/>
+        </scene>
+        <!--Playlist Table-->
+        <scene sceneID="665-yx-cLl">
+            <objects>
+                <controller identifier="PlaylistTable" title="Playlist Table" id="XFf-jM-WQy" customClass="PlaylistController" customModule="onlymusic_watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="pb2-aM-ypZ">
+                            <items>
+                                <tableRow identifier="Playlist" id="CUd-W9-vMz">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="l62-mZ-frA"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="playlistTable" destination="pb2-aM-ypZ" id="QUV-Zp-zaY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="151" y="327"/>
         </scene>
     </scenes>
 </document>
-
